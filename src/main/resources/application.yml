@@ -6,9 +6,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/securityalibou
+    url: jdbc:mysql://localhost:3306/mahmoud
     username: root
-    password: SLAMA250@@mahmoud##
+    password: pass
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

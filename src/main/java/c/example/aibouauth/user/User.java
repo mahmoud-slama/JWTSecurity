@@ -25,9 +25,9 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue
     private Integer id;
-    private String firstname;
+    private String firstName;
 
-    private String lastname;
+    private String lastName;
     private  String email;
     private  String password;
     @Enumerated(EnumType.STRING)
@@ -37,7 +37,7 @@ public class User implements UserDetails {
     private  List<Token>tokens;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return  role.getAuthorities();
+        return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
     @Override
